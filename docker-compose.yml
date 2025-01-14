@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  nginx-rtmp:
+    image: b17e26139bce5d911babe2d2e2d862c251dd2f6b68d7ad59359b15b9ca5e3a29
+    container_name: nginx-rtmp
+    ports:
+      - "1935:1935"
+      - "81:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - /home/o/Metube/tmp:/tmp 
+
